@@ -1,0 +1,218 @@
+
+
+
+/*  Text colors =============================== */
+
+body, html, .qt-content-main, .qt-negative .qt-caption-small span, .qt-paper, .qt-negative .qt-caption-med, .qt-card  {
+	color: $qt-text-color;
+}
+
+
+.qt-text-secondary {
+	color: $qt-text-color-secondary;
+}
+.qt-color-secondary {
+	color: $qt-color-secondary;
+}
+
+*::placeholder {
+	color: $qt-text-color;
+	opacity: 0.7;
+}
+
+a { color: $qt-color-accent; }
+a:hover { color: $qt-color-accent-hover; }
+h1, h2, h3, h4, h5, h6 {
+	a {
+		color: $qt-titles-color;
+	}
+	color: $qt-titles-color;
+}
+.qt-btn {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.qt-content-main a, a.qt-logo-text span {
+	color: $qt-color-accent; 
+}
+.qt-content-aside, .qt-footer, .qt-tags {
+	color: $qt-text-color-aside;
+	a { color: $qt-color-secondary; }
+}
+
+
+
+.qt-negative, 
+.qt-content-primary-dark,
+.qt-content-primary,
+.qt-content-primary-light,
+.qt-accent, .qt-btn-primary, .btn-primary,
+.qt-secondary, .qt-btn-secondary, .btn-secondary,
+nav.qt-menubar ul.qt-desktopmenu a:hover, .qt-side-nav a , .qt-sharepage a {
+	h1, h2, h3, h4, h5, h6 {
+		color: $qt-text-color-negative;
+		a {
+			color: $qt-color-accent;
+		}
+	}
+	color: $qt-text-color-negative;
+}
+.qt-caption-med, .qt-text-neg {
+	color: $qt-text-color-negative;
+}
+.qt-logo-text {
+	color: $qt-text-color-negative !important;
+}
+
+
+.qt-mobile-menu, 
+.qt-menu-social a,
+.qt-menubar-top a  {
+	color: $qt-text-color-negative-light;
+}
+.qt-menubar, .qt-side-nav  {
+	a {
+		color: $qt-text-color-negative;
+	}
+}
+
+.qt-negative, .qt-text-neg {
+	.qt-btn-ghost {
+		color: $qt-text-color-negative;
+	}
+}
+
+
+
+/*  =====================================================================================================================
+
+Background colors 
+
+===================================================================================================================== */
+
+body, html, .qt-body {
+	background-color:$qt-color-background; 
+}
+.qt-widgets  {
+	.qt-caption-small span, .qt-caption-med span{
+		background-color: $qt-primary-color;
+	}
+}
+
+.qt-paper, .qt-card, .qt-card-s,  .qt-negative .qt-caption-med span, 
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea
+ {
+	background-color: $qt-color-paper;
+}
+
+
+.qt-caption-small span {
+	background-color: $qt-primary-color; 
+}
+
+.qt-text-secondary .qt-caption-small span {
+	background-color: $qt-primary-color;
+}
+
+.qt-content-primary, .qt-menubar-top,  {
+	background-color: $qt-primary-color;
+}
+.qt-content-primary-dark, .qt-menubar , .qt-mobile-menu, .qt-desktopmenu a,
+.qt-caption-small span, .qt-caption-med span {
+	background-color: $qt-primary-color-dark; 
+}
+.qt-content-primary-light {
+	background-color: $qt-primary-color-light;
+}
+.qt-accent, .qt-btn-primary, .btn-primary, nav.qt-menubar ul.qt-desktopmenu a:hover, .qt-sharepage a:hover,
+.qt-btn-primary  {
+	background-color: $qt-color-accent !important; 
+}
+a.qt-link-layer {
+	background-color: $qt-color-accent-hover !important; 
+}
+
+
+.qt-secondary, .qt-btn-secondary, .btn-secondary, .qt-side-nav li li a,
+.slick-slider .slick-arrow::after, .slick-slider .slick-dots li.slick-active button {
+	background-color: $qt-color-secondary !important; 
+}
+
+.qt-negative .qt-caption-small span {
+	background-color: $qt-text-color-negative;
+}
+
+.qt-content-primary, .qt-content-primary-dark, .qt-content-primary-light, .qt-accent, .qt-btn-primary, .btn-primary, nav.qt-menubar ul.qt-desktopmenu a:hover, .qt-sharepage a:hover {
+	i {
+		opacity: 1;
+	}
+}
+
+
+/*  Border colors =============================== */
+
+.qt-tags a, .qt-widgets .qt-caption-small {
+	border-color: $qt-text-color-secondary;
+}
+.qt-menubar ul.qt-desktopmenu > li::after, 
+.qt-menubar ul.qt-desktopmenu > li > a::after,
+.qt-menubar ul.qt-desktopmenu > li > a::before ,
+.qt-menubar ul.qt-desktopmenu > li.current_page_item:hover::after, 
+.qt-menubar ul.qt-desktopmenu > li.current_page_item:hover > a::after,
+.qt-menubar ul.qt-desktopmenu > li.current_page_item:hover > a::before,
+.qt-negative .qt-caption-small, 
+.qt-negative .qt-btn-ghost,
+.qt-negative .qt-widgets .qt-caption-small {
+	border-color: $qt-text-color-negative;
+}
+.qt-menubar ul.qt-desktopmenu > li.current_page_item::after, 
+.qt-menubar ul.qt-desktopmenu > li.current_page_item > a::after,
+.qt-menubar ul.qt-desktopmenu > li.current_page_item > a::before {
+	border-color: $qt-color-accent;
+	opacity: 1;
+}
+.qt-pageheader .qt-caption {
+	border-color: $qt-color-accent;
+}
+.qt-caption-small  {
+	border-color:  $qt-primary-color;
+}
+
+
+/* desktop hover states colors
+========================================================================== */
+
+@media #{$large-and-up} {
+
+	/* Menu bar top  */
+	.qt-menubar-top {	
+		a:hover {
+			color: $qt-color-secondary-hover; 
+		}
+	}
+	.qt-menubar {	
+		a:hover {
+			color: $qt-color-accent-hover; 
+		}
+	}
+	.qt-btn-primary, .btn-primary {
+		&:hover {
+			background-color: $qt-color-accent-hover;
+			color: $qt-text-color-negative;
+		}
+	}
+	.qt-btn-secondary, .btn-secondary {
+		&:hover {
+			background-color: $qt-color-secondary-hover;
+			color: $qt-text-color-negative;
+		}
+	}
+	/* Borders */
+	.qt-tags a:hover {
+		border-color: $qt-color-secondary-hover;
+		color: $qt-color-secondary-hover;
+	}
+
+}
+
+

@@ -1,0 +1,74 @@
+/* Chart tracklist
+    ========================================================================== */
+.qt-chart-tracklist {
+	border: none;
+	padding: 0;
+	margin: 0;
+	box-shadow: none;
+	.qt-chart-track {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 0.7rem 0;
+		border: none;
+		margin-bottom: .7rem;
+		.qt-chart-table {
+			display: block;//desktop: table
+		    width: 100%;
+			padding: 0;
+			.qt-position {
+				display: block; //desktop: table-cell
+				position: relative;
+				width: 100%;//// desktop: 170px 
+				vertical-align: middle;
+				text-align: center;
+				img {
+					width: 100%;
+					height: auto;
+					display: block;
+				    position: relative;
+				    z-index: 1;
+				}
+				span {
+					position: absolute;
+					top:50%;
+					left: 50%;
+					z-index: 2;
+					font-size: 64px;
+					line-height: 64px;
+					margin-top: -32px;
+					margin-left: -32px;
+
+				}
+			}
+			.qt-titles {
+				display: block;//desktop: table-cell
+				position: relative;
+				width: 100%; //desktop: auto
+				vertical-align: middle;
+				padding: 14px; // desktop: padding: 0 14px 0 40px;
+				
+				p { line-height: 1em; }
+			}
+			.qt-action {
+				display: block;//desktop: table-cell
+				position: relative;
+				width: 100%;//desktop: auto
+				vertical-align: middle;
+				padding: 0 14px 14px 14px; // desktop: padding: 0 14px 0 40px;
+				text-align: center;
+				/// MOBILE ONLY HERE:
+				a {
+					float: none;
+				    margin: 0 auto;
+				    display: block;
+				    text-align: center;
+					i {
+						float: none;
+					    margin: 0 auto;
+					    line-height: 64px;
+					}
+				}
+			}
+		}
+	}
+}

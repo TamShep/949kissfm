@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>360&deg; MP3 player UI demo (SoundManager 2): Javascript + Canvas Visualization</title>
+<meta name="robots" content="noindex" />
+<meta name="description" content="Javascript + Canvas + SoundManager 2: 360-degree circular control / jog wheel example for playing MP3 links, with EQ and spectrum visualization options" />
+
+<!-- soundManager.useFlashBlock: related CSS -->
+<link rel="stylesheet" type="text/css" href="../flashblock/flashblock.css" />
+
+<!-- required -->
+<link rel="stylesheet" type="text/css" href="360player.css" />
+<link rel="stylesheet" type="text/css" href="360player-visualization.css" />
+
+<!-- special IE-only canvas fix -->
+<!--[if IE]><script type="text/javascript" src="script/excanvas.js"></script><![endif]-->
+
+<!-- Apache-licensed animation library -->
+<script type="text/javascript" src="../../script/berniecode-animator.js"></script>
+
+<!-- the core stuff -->
+<script type="text/javascript" src="../../script/soundmanager2.js"></script>
+<script type="text/javascript" src="../../script/360player.js"></script>
+
+<script type="text/javascript">
+
+soundManager.setup({
+  // path to directory containing SM2 SWF
+  url: '../../swf/'
+});
+
+
+
+threeSixtyPlayer.config.useWaveformData = true;
+threeSixtyPlayer.config.useEQData = true;
+
+// enable this in SM2 as well, as needed
+
+if (threeSixtyPlayer.config.useWaveformData) {
+  soundManager.flash9Options.useWaveformData = true;
+}
+if (threeSixtyPlayer.config.useEQData) {
+  soundManager.flash9Options.useEQData = true;
+}
+if (threeSixtyPlayer.config.usePeakData) {
+  soundManager.flash9Options.usePeakData = true;
+}
+
+if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
+  // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
+  soundManager.preferFlash = true;
+}
+
+
+if (window.location.href.match(/html5/i)) {
+  // for testing IE 9, etc.
+  soundManager.useHTML5Audio = true;
+}
+
+</script>
+
+
+
+</head> 
+
+<body>
+	<div class="sm2-inline-list"> <!-- remove this class to have one item per line -->
+
+			<div class="ui360 ui360-vis"><a href="http://freshly-ground.com/data/audio/sm2/The%20Fugitives%20-%20Graffiti%20Sex.mp3">The Fugitives - Graffiti Sex</a></div>
+			<div class="ui360 ui360-vis"><a href="http://freshly-ground.com/data/audio/sm2/Adrian%20Glynn%20-%20Blue%20Belle%20Lament.mp3">Adrian Glynn - Blue Belle Lament</a></div>
+			<div class="ui360 ui360-vis"><a href="http://freshly-ground.com/data/audio/sm2/SonReal%20-%20I%20Tried.mp3">SonReal - I Tried</a></div>
+			<div class="ui360 ui360-vis"><a href="http://freshly-ground.com/data/audio/sm2/SonReal%20-%20People%20Asking.mp3">SonReal - People Asking</a></div>
+			<div class="ui360 ui360-vis"><a href="http://freshly-ground.com/data/audio/mpc/20060826%20-%20Armstrong.mp3">20060826 - Armstrong Groove</a></div>
+
+	   	</div>
+	
+	
+</div>
+
+</body>
+</html>

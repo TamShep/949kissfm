@@ -1,0 +1,393 @@
+/* Archive items: base for styling any archive items. Some may differ for size and proportions.
+   ========================================================================== */
+.qt-part-archive-item {
+	margin-bottom: 40px;
+	.qt-item-header {
+		position: relative;
+		background: #000;
+		color: #fff;
+		.qt-header-top {
+			position: relative;
+			display: table;
+			z-index: 2;
+			width: 100%;
+			.qt-feedback {
+				display: table-cell;
+				width: auto;
+				line-height: 35px;
+				font-size: 13px;
+				i {
+					margin: 0 6px;
+					font-size: 23px;
+					position: relative;
+					top: 6px;
+					opacity: 1;
+				}
+				a {
+					color: #fff;
+					margin: 0 0 0 10px;
+				}
+				
+				
+			}
+		}
+		.qt-header-mid {
+			position: relative;
+			display: table;
+			z-index: 2;
+			min-height: 200px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 80%;
+			margin: 0 auto;
+			padding: 20px 0;
+			text-align: center;
+			.qt-title {
+				a {
+					color: #fff;
+					margin: 0 0 0 10px;
+				}
+			}
+		}
+		.qt-header-bottom {
+			position: relative;
+			display: table;
+			z-index: 2;
+			width: 100%;
+			padding: 13px 0;
+			.qt-item-metas {
+				padding: 0 0.3rem;
+				width: 100%;
+				text-align: left;
+				font-size: 13px;
+				line-height: 1.1em;
+				display: table;
+				.qt-author-thumb {
+					width: 30px;	
+				    height: 30px;
+				    overflow: hidden;
+				    border-radius: 50%;
+				    border: 2px solid #fff;
+				    display: table-cell;
+					float: left;
+					margin: 0 10px;
+				}
+				.qt-texts {
+					display: table-cell;
+					vertical-align: middle;
+					float: left;
+					color: #fff;
+					height: 30px;
+					a {
+						color: #fff;
+					}
+					.qt-date {
+						text-transform: uppercase;
+						opacity: 0.55;
+						padding: 2px 0 0 0;
+					}
+					.qt-author {
+						font-weight: strong;
+					}
+				}
+			}
+			.qt-readmore {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+		.qt-header-bg {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			opacity: 0.65;
+			img {
+				display: none;
+			}
+		}
+	}
+	.qt-item-content, .qt-item-content-s, .qt-item-content-xs {
+		padding: 10px;
+		h1, h2, h3, h4 {
+			text-transform: uppercase;
+		}
+	}
+
+
+
+	/* Featured post
+   ========================================================================== */
+	&.qt-featured {
+		.qt-icon-featured {
+			line-height: 45px;
+			height: 45px;
+			width: 45px;
+			display: inline-block;
+			border: 3px solid #fff;
+			margin-bottom: 40px;
+		}
+		
+	}
+
+	&.qt-part-item-post-hero {
+		.qt-item-header {
+			.qt-header-top {
+				.qt-feedback {
+					float: right;
+				}
+			}
+			.qt-header-mid {
+				padding: 80px 0;
+				min-height: 180px;
+				.qt-tags {
+					display: block;
+					text-align: center;
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+
+	/* vertical post
+   ========================================================================== */
+	&.qt-vertical {
+		.qt-icon-featured {
+			line-height: 45px;
+			height: 45px;
+			width: 45px;
+			display: inline-block;
+			border: 3px solid #fff;
+			margin-bottom: 40px;
+		}
+	}
+
+	/* compact
+    ========================================================================== */
+	&.qt-compact {
+	}
+
+	/* events
+    ========================================================================== */
+	&.qt-item-event {
+		.row {
+			margin-bottom: 0;
+		}
+		.qt-item-header {
+			.qt-header-mid {
+				padding: 0;
+				max-width: 100%;
+				margin: 0;
+				min-height: 130px;;
+			}
+			.qt-date {
+				width: 100%;
+				display: block;
+				text-align: center;
+				.qt-day {
+					font-size: 4rem;
+					line-height: 4rem;
+					display: block;
+					clear: both;
+					width: 100%;
+				}
+				.qt-month {
+					font-size: 1rem;
+									display: block;
+
+					clear: both;
+					width: 100%;
+				}
+			}
+		}
+		.qt-btn.bottom.right {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		margin-bottom: .7rem;
+	}
+
+
+	
+
+	/* podcast
+    ========================================================================== */
+
+	&.qt-item-podcast {
+		.dripicons-media-play {
+			font-size: 64px;
+		}
+		.qt-item-content-s {
+			text-align: center;
+		}
+
+	}
+
+	/* member
+    ========================================================================== */
+	&.qt-item-member {
+		.qt-item-header {
+			.qt-header-mid {
+				padding: 0;
+				max-width: 100%;
+				margin: 0;
+				min-height: 130px;;
+			}
+		}
+	}
+
+	/* Schedule onair large
+    ========================================================================== */
+	&.qt-part-schedule-onair-large {
+
+	}
+
+
+
+
+	/* Schedule page items
+    ========================================================================== */
+	&.qt-part-show-schedule-day-item {
+		position: relative;
+		overflow: hidden;
+		.qt-item-header {
+			.qt-header-mid {
+				min-height: 162px;
+
+				padding: 10px 40px 0 40px;
+				max-width: 100%;
+				.qt-item-title.qt-title {
+					text-align: left;
+					margin: 0;
+					a {
+						margin: 0;
+					}
+				}
+				.qt-item-det {
+					text-align: left;
+					line-height: 36px;
+					border-top: 1px solid #fff;
+					padding: 10px 0 0 0;
+					margin-top: 10px;
+					.qt-time {
+						font-size: 36px;
+						font-weight: 300;
+					}
+					.qt-am {
+						vertical-align: top;
+						position: relative;
+						top: -0.5rem;
+					}
+					.qt-day {
+						vertical-align: top;
+						float: right;
+						position: relative;
+						top: 4px;
+					}
+				}
+			}
+			.qt-info {
+				position: absolute;
+				bottom: 1rem;
+				right: 1rem;
+				color: #fff;
+				z-index: 10;
+			}
+		}
+		
+	}
+	.qt-overinfo {
+		position: absolute;
+		z-index: 100;
+		top:100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		.qt-item-det {
+			text-align: left;
+			line-height: 36px;
+			padding: 1rem 40px 0.5rem 40px;
+			.qt-time {
+				font-size: 36px;
+				font-weight: 300;
+			}
+			.qt-am {
+				vertical-align: top;
+				position: relative;
+				top: -0.5rem;
+			}
+			.qt-day {
+				vertical-align: top;
+				float: right;
+				position: relative;
+				top: 4px;
+			}
+
+		}
+		.qt-more {
+			line-height: 17px;
+			font-size: 13px;
+			padding: 0.7rem 40px 0 40px;
+		}
+	}
+
+	/* Show items upcoming (with time)
+    ========================================================================== */
+	&.qt-part-archive-item-show {
+		.qt-item-header {
+			.qt-header-mid {
+				min-height: 210px;
+				padding: 40px 10px;
+				max-width: 100%;
+				.qt-time {
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
+	}
+
+
+	/* Show items upcoming (with time)
+    ========================================================================== */
+	&.qt-part-archive-item-small-text {
+		.qt-item-header {
+			min-height: 170px;
+			.qt-header-bottom {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+
+	/* TITLE IN OVERLAY
+    ========================================================================== */
+	&.qt-part-archive-item-small-title {
+		.qt-item-header {
+			.qt-header-mid {
+			    min-height: 0;
+			    padding: 10px 10px 30px;
+			    max-width: 100%;
+			}
+		}
+	}
+
+
+	
+
+	
+}
+
+
+
+
+
+
+
+
+
+

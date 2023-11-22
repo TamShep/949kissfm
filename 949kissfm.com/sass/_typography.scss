@@ -1,0 +1,562 @@
+/* 
+01. WordPress Core
+02. Custom template Typography
+*/
+
+
+
+
+/* = 01. WordPress Core
+==============================================================*/
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+.aligncenter, div.aligncenter {
+	text-align: center;
+	display: block;
+}
+.alignright {
+	float:right;
+	margin: 5px 0 20px 20px;
+}
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%; /* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+.qt-page-contents .sticky {position: initial;}
+.bypostauthor {margin:1em;}
+
+
+
+
+
+
+/* 02. Custom template Typography
+   ========================================================================== */
+$qt-base-mobile: 16px;
+$qt-lineheight-mobile: 1.5em;
+$qt-font-scale: 1.414;
+
+@function calculateRem($size) {
+  $remSize: $size / $qt-base-mobile;
+  @return $remSize;
+}
+
+
+body, html {
+	font-size: $qt-base-mobile;
+	line-height: $qt-lineheight-mobile;
+	// font-family: 'Open Sans', sans-serif;
+	strong {
+		font-weight: 700;
+	}
+}
+
+.qt-small { font-size: 13px; line-height: 1.5em; }
+
+/*  TITLES */
+$qt-titles-base-mobile: 1rem;
+$qt-titles-scale-mobile: 1.15;
+$qt-titles-lineheight-mobile: 1.05;
+
+h1, h2, h3, h4, h5, h6, .qt-btn, .qt-capfont {
+	// font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	line-height: 1.05em;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	text-rendering: geometricPrecision;
+	margin: 0;
+	padding: 0;
+}
+h6 {
+	font-size: $qt-titles-base-mobile * (1/$qt-titles-scale-mobile);
+
+}
+h5 {
+	font-size: 1rem;
+}
+h4 {
+	font-size: 1.3rem;
+}
+h3 {
+	font-size:  1.4rem;
+}
+h2 {
+	font-size:  1.8rem;
+}
+h1 {
+	font-size:  2.5rem;
+}
+
+a {
+	text-rendering: optimizeLegibility;
+}
+/*  MENU */
+.qt-logo-text {
+	font-size:  $qt-titles-base-mobile * (2 * $qt-titles-scale-mobile);
+}
+.qt-menubar-top, .qt-menubar, .qt-side-nav, .qt-menu-footer{
+	// font-family: 'Oswald', sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-rendering:auto;
+	transform: translate3d(0, 0, 0);
+
+}
+.qt-thin  {
+		font-weight: 300;
+
+}
+
+.qt-menubar-top, .qt-menu-footer {
+	font-size: 0.9rem;
+	font-weight: 400;
+}
+
+.qt-menubar, .qt-side-nav {
+	text-rendering: geometricPrecision;
+}
+
+i {
+	opacity: 0.54;
+	position: relative;
+	top: 0.1em;
+}
+
+
+p {
+	i {
+		position: relative;
+		top: 0.25rem;
+	}
+}
+
+
+
+/* 03. Various elements
+   ========================================================================== */
+
+
+.qt-the-content {
+
+
+	iframe {max-width: 100%}
+
+	p, ol, ul, blockquote, table, dl, h1, h2, h3, h4, h5, h6 {
+	  + h1 { margin-top: 0.7em ;}   
+	  + h2 { margin-top: 0.6em ;}   
+	  + h3 { margin-top: 0.6em ;}   
+	  + h4 { margin-top: 0.5em ;}  
+	  + h5 { margin-top: 1em ;} 
+	  + h6 { margin-top: 1em ;}  
+	  + p, + ul, + ol, + img , + iframe{ margin-top: 1.4em ; }
+	}
+
+
+
+	address {margin: 2rem 0.5rem;}
+
+
+	dl {
+		dt { font-weight: bold; }
+		dt, dd { margin-top: 1rem;}
+		dt + dd {margin: 0;}
+	}
+
+
+
+	h1, h2, h3, h4, h5, h6 {
+		text-transform: none;
+	}
+	ul, ol {
+	  margin-left: 26px;
+	  li {
+	    list-style-type: square;
+	    padding: 8px 16px;
+
+	  }
+	}
+
+
+	table { 
+		border-collapse: initial;
+	  td, th {
+	    padding:15px 0;
+	    border-bottom: 1px solid rgba(0,0,0,0.2);
+	    border-collapse: initial;
+	    border-radius: 0;
+	  }
+	  th {
+	  	border-bottom: 2px solid rgba(0,0,0,0.3);
+	  }
+
+	  tr:first-child {
+	    border-top: 1px solid rgba(0,0,0,0.2);
+	  }
+	  font-size: .8em;
+	  line-height: 1.3em;
+	}
+}
+
+
+blockquote { 
+	font-size:1rem; 
+	padding: 1rem 0.7rem;
+	position:relative; 
+	border:none;
+	margin: 2rem 0 2.5rem 0;
+	min-height: 3rem;
+	background: rgba(0,0,0,0.02);
+
+	//font-family: "FontAwesome";
+	text-rendering: geometricPrecision;
+	letter-spacing: 0.02em;
+  	p {
+	    font-weight: light;
+	    font-size: 1.4rem;
+	    font-style: italic;
+	    line-height:1.5em;
+  	}
+
+
+	&::before {
+	    font-size: 3rem;
+	    display:block;
+	    clear: both;
+	    width: 100%;
+	    height:3rem;
+	    text-align: center;
+
+	    content:"\f10d";
+	    left: 0.5em;top:0.3em;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    font-family: "FontAwesome";
+	    
+	    line-height:1.2em;
+	    opacity: 0.2;
+  	}
+
+
+	acronym {font-style: italic;}
+	cite {font-size:.6em;display:block;clear:both;margin:1em 0;opacity:0.8;line-height:1.3em;}
+	q {font-size:1.72em;line-height:1.4em;font-style: italic;}
+	kbd, code, pre, var {font-size:14px; padding:4px 14px 6px 14px;background:rgba(100,100,100,.2);border-radius:3px; margin: 14px 0 30px;}
+
+}
+
+
+/*  Captions ==========================================================================*/
+
+
+.qt-caption {
+	border-bottom: 6px solid #ffffff;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	padding-bottom: 1rem;
+}
+.qt-subtitle {
+	margin-top: 2rem;
+}
+.qt-caption-med {
+	padding: 0.5rem;
+	margin: 0 0 0.7rem 0;
+	margin: 0 auto;
+	text-align: center;
+	span {
+		display: inline-block;
+		padding: 0.2em 0.5em;
+		font-size: 38px;
+		line-height: 1em;
+	}
+}
+.qt-caption-small {
+	border-bottom: 4px solid #000;
+	line-height: 2em;
+	height: 1.78em;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	span {
+		display: inline;
+		color: white;
+		background: #000;
+		padding: 0 0.5em;
+		line-height: 2rem;
+	}
+}
+
+
+/*  inline-caption ==========================================================================*/
+
+
+
+.qt-inline-textdeco {
+	display:table;
+	width:100%;
+	opacity: 0.75;
+	span {
+		display:inline-block;
+		width: auto;
+		white-space: nowrap;
+		padding-right: 10px;
+	}
+	&::after {
+		content: " ";
+		 display: table-cell;
+		  width: 100%;
+		  background: #fff;
+		  opacity: 0.35;
+	}
+
+}
+hr.qt-inline-textdeco {
+	opacity: 0.75;
+	height: 0.7em;
+	border: none;
+}
+
+/*  Buttons ==========================================================================*/
+.qt-btn, input[type="button"] {
+	display: inline-block;
+	text-transform: uppercase;	
+	padding: 0 0.9rem;
+	line-height: 2.8rem;
+	font-size: 1rem;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	border: none;
+	i {
+		top: 0.1em;
+		opacity: 0.83;
+		margin: 0;
+		position: relative;
+	}
+	
+	&.qt-btn-s {
+		line-height: 2rem;
+		font-size: 13px;
+		min-width: 2rem; 
+	}
+	&.qt-btn-l {
+		line-height: 4rem;
+		font-size: 1.414rem;
+		padding: 0 0.7rem;
+		min-width: 4rem; 
+
+
+
+	}
+	&.qt-btn-ghost{
+		background-color: transparent;
+		border: 2px solid;
+
+		line-height: 62px;
+	    height: 62px;
+	    font-size: 1.414rem;
+	    padding: 0 13px;
+	    min-width: 4rem;
+	    text-align: center;
+	    display: table-cell;
+	    align-items: center;
+	    vertical-align: middle;
+	}
+}
+
+.qt-text-shadow {
+	text-shadow: 0 3px  0 rgba(0,0,0,0.6);
+	&.small {
+		text-shadow: 0 1px  2px rgba(0,0,0,0.6);
+	}
+	.qt-btn {
+		text-shadow: none;
+	}
+}
+
+
+/*  Input fields ==========================================================================*/
+
+input[type="text"].qt-input-s {
+	line-height: 2rem;
+	font-size: 0.7rem;
+	height: 2rem;
+}
+
+input[type="text"].qt-input-l {
+	line-height: 4rem;
+	font-size: 1.414rem;
+	height: 4rem;
+	padding: 0 1rem;
+	margin: 0;
+}
+
+/*  List ==========================================================================*/
+
+
+.qt-list-chevron {
+	li {
+		list-style: none;
+		&::before {
+			display: inline;
+		    font-family: "dripicons-v2";
+		    speak: none;
+		    font-style: normal;
+		    font-weight: normal;
+		    font-variant: normal;
+		    text-transform: none;
+		    line-height: 1;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    content: "\56";
+		    position: relative;
+		    top: 0.11em;
+		    margin-right: 0.6em;
+		}
+	}
+}
+
+
+
+/*  Ellipsis ==========================================================================*/
+
+
+.qt-ellipsis {
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	max-width: 100%;
+	height: 1.2em; /* Fallback for non-webkit */
+	line-height: 1.5em;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&.qt-t {
+		line-height: 1.07em;
+		height: 1.03em; /* Fallback for non-webkit */
+	}
+}
+
+.qt-ellipsis-2 {
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	max-width: 100%;
+	height: 3em; /* Fallback for non-webkit */
+	line-height: 1.5em;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&.qt-t {
+		line-height: 1.05em;
+		height: 2em; /* Fallback for non-webkit */
+	}
+}
+
+.qt-ellipsis-3 {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 100%;
+  height: 4.5em; /* Fallback for non-webkit */
+  line-height: 1.5em;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &.qt-t {
+		line-height: 1.05em;
+		height: 3.1em; /* Fallback for non-webkit */
+	}
+}
+
+.qt-ellipsis-4 {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 100%;
+  height: 4.5em; /* Fallback for non-webkit */
+  line-height: 1.5em;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &.qt-t {
+		line-height: 1.05em;
+		height: 4.2em; /* Fallback for non-webkit */
+	}
+}

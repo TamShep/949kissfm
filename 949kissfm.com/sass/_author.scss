@@ -1,0 +1,35 @@
+
+/* Author */
+.qt-the-content {
+	.qt-post-author {
+		padding: 1rem;
+		margin-top: 2rem;
+		h4, h6 {
+			text-transform: uppercase;
+			margin-top: 0.3rem;
+		}
+		.qt-post-author-picture {
+			a {
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+				width: 2.8rem;
+				height: 2.8rem;
+				overflow: hidden;
+				display: inline-block;
+				border-radius: 50%;
+				border: 3px solid;
+			}
+		}
+		.qt-post-author-data {
+
+		}
+		.qt-post-author-link {
+			padding-top: 2rem;
+			a.qt-btn {
+				width:100%;
+			}
+		}
+	}
+}

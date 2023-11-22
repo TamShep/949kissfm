@@ -1,0 +1,44 @@
+/* COLOR TIPS: http://materializecss.com/color.html ===*/
+
+
+
+
+
+$qt-primary-color: #454955;
+$qt-primary-color-light: #565c68;
+$qt-primary-color-dark: #101010;
+
+
+$qt-color-accent: #dd0e34;
+$qt-color-accent-hover: #ff0442;
+$qt-color-secondary: #64c9d9;
+$qt-color-secondary-hover: #58a4b0;
+
+$qt-color-background: #f1f2f5;
+$qt-color-paper: #ffffff;
+
+$qt-text-color: rgba(0,0,0,0.87);
+$qt-text-color-secondary: rgba(0,0,0,0.65);
+$qt-titles-color: rgba(0,0,0,0.75);
+$qt-text-color-aside: rgba(0,0,0,0.65);
+$qt-text-color-divider-and-hints: rgba(0,0,0,0.38);
+$qt-text-color-negative: #ffffff;
+$qt-text-color-negative-light: rgba(255,255,255,0.65);
+
+
+
+/* Addiing custom palette to materializecss framework */
+
+ 
+
+$primary-color: $qt-color-accent;
+$primary-color-light: $qt-color-accent-hover;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: $qt-color-secondary;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: $qt-color-accent;
+$link-color-hover: $qt-color-accent-hover; 
+
+

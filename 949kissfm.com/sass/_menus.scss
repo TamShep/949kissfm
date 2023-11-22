@@ -1,0 +1,130 @@
+
+
+
+/* 04. Menu
+   ========================================================================== */
+nav .button-collapse i {
+	font-size: 1.4em;
+}
+
+/* Menu bar top  ============================*/
+.qt-menubar-top {
+	position: relative;
+	z-index: 300;
+	margin: 0;
+	padding: 0 0.5rem;
+	overflow: hidden;
+
+	ul {
+
+		li {
+			display: inline;
+			line-height: 30px;
+   			height: 30px;
+   			padding: 0 0.2rem;
+   			
+			a {
+				
+				line-height: 30px;
+				i {
+					font-size:1em;
+					opacity: 1;
+				}
+
+			}
+		}
+	}
+}
+
+
+
+/* Menu bar  ============================*/
+
+.qt-menubar {
+	position: relative;
+	z-index: 300;
+	margin: 0;
+	padding: 0;
+	display: table;
+	nav.qt-menubar {
+		margin: 0;
+		padding: 0 1rem;
+
+		.qt-logo-text {
+			position: relative;
+			float: left;
+			line-height: (3 * $qt-font-scale)+rem;
+		}
+
+	}
+	i {
+	    display: inline;
+	    font-size: ($qt-font-scale)+rem;
+	    position: relative;
+	    top: 0.25rem;
+	    width: 1.4rem;
+	}
+}
+
+
+
+.qt-menu-social {
+	font-size: 1.414rem * 1.414;
+	line-height: 1.5em;
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: inline;
+		i {
+			position: relative;
+			top: 5px;
+		}
+	}
+}
+
+
+/* Mobile menu  ============================*/
+
+.qt-side-nav {	
+	li {
+		display: block;
+		position: relative;
+		&.menu-item-has-children  { 
+			> a::after {
+
+			    display: inline;
+			    font-family: "dripicons-v2";
+			    speak: none;
+			    font-style: normal;
+			    font-weight: normal;
+			    font-variant: normal;
+			    text-transform: none;
+			    line-height: 1;
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			    content: "\54";
+			    position: relative;
+			    right:10px;
+			    top: 50%;
+			    line-height: 2rem;
+			    height: 2rem;
+			    float: right;
+			    margin-top: -0.8rem;
+			}
+			&.open {
+				height: auto;
+				ul {
+					display: block;
+				}
+				> a::after {
+					content: "\57";
+				}
+			}
+		}
+
+		ul {
+			display: none;
+		}
+	}
+}

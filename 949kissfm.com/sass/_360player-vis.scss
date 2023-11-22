@@ -1,0 +1,216 @@
+
+
+
+/* =============================================================== VISUALIZATION =================================== */
+
+
+
+/* larger canvas, spectrum + EQ visualization and other items */
+
+
+
+$qt-sizeplayer: 360px;
+
+.ui360-vis,
+.ui360-vis .sm2-360ui,
+.sm2-inline-list .ui360-vis {
+	 /* size of the container for the circle, etc. */
+	 width: $qt-sizeplayer;
+		height: $qt-sizeplayer;
+}
+
+
+
+
+
+.ui360-vis {
+	 position:relative;
+	 /* a little extra spacing */
+	 padding-top:1px;
+	 padding-bottom:1px;
+	 padding-left:$qt-sizeplayer;
+	 margin: 0 auto;
+	 background-position:22.6% 50%; 
+
+}
+
+.sm2-inline-list .ui360-vis {
+ 	cursor:pointer
+}
+
+.ui360-vis a {
+ font:14px "helvetica neue",helvetica,monaco,lucida,terminal,monospace;
+ white-space:nowrap;
+ text-indent:0px; /* undo inline style */
+ top:46%; /* ehh. */
+}
+
+.sm2-inline-list .ui360-vis a {
+ line-height:$qt-sizeplayer;
+ top:auto;
+}
+
+.ui360-vis .sm2-360ui {
+ margin-left:-$qt-sizeplayer;
+}
+
+.ui360-vis .sm2-timing {
+ font:bold 24px "helvetica neue",helvetica,monaco,lucida,terminal,monospace;
+ color:inherit !important;
+ text-align:center;
+ line-height:$qt-sizeplayer;
+ text-indent:0px;
+}
+
+.sm2-inline-list .ui360-vis,
+.sm2-inline-list .ui360-vis .sm2-360ui {
+ margin-left:0px;
+}
+
+.sm2-inline-list .ui360-vis {
+ margin:8px 13px 7px 0px;
+ padding-left:0px;
+ background-position:50% 50%; /* initial play button position */
+}
+
+.sm2-inline-list .ui360-vis .sm2-360ui {
+	 border:1px solid #eee;
+	 /* offset the border */
+	 margin-left:-1px;
+	 margin-top:-1px;
+}
+
+.sm2-inline-list .ui360-vis a {
+	 position:absolute;
+	 display:inline;
+	 left:0px;
+	 bottom:0px;
+	 top:1px;
+	 width:100%; /* 2px padding in box */
+	 height:99%; /* dumb vertical hack */
+	 *height:$qt-sizeplayer; /* IE is dumb. */
+	 overflow:hidden;
+	 font-size:small;
+	 font-weight:300;
+	 color:#333;
+	 margin:0px;
+	 padding:0px;
+	 line-height:488px; /* bottom vertical alignment for text */
+	 *line-height:480px; /* IE again */
+	 text-align:center;
+	 border-radius:0px;
+}
+
+.sm2-inline-list .ui360 a:hover {
+ 	background-color:transparent; /* reset */
+}
+
+.sm2-inline-list .ui360-vis:hover .sm2-360ui,
+.sm2-inline-list .ui360-vis a.sm2_link:hover,
+.sm2-inline-list .ui360-vis a.sm2_link:active,
+.sm2-inline-list .ui360-vis a.sm2_link:focus {
+ 	background-color:transparent;
+}
+
+/* Use a bigger loading image for this layout */
+$playericonsize:  100px;
+
+.ui360-vis .sm2-360btn,
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
+.ui360-vis .sm2-360ui.sm2_playing .sm2-360btn {
+	 width:$playericonsize;
+	 height:$playericonsize;
+	 margin-left:-($playericonsize/2);
+	 margin-top:-($playericonsize/2);
+	 border-radius: none;
+	 text-align: center;
+}
+
+
+.ui360-vis {
+	cursor:pointer;
+}
+
+
+
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
+.ui360-vis .sm2-360btn-default,
+.ui360-vis:hover .sm2-360btn,
+.ui360-vis .sm2-360btn-default:hover,
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn:hover,
+.ui360-vis .sm2-360ui.sm2_playing .sm2-360btn:hover,
+.ui360-vis .sm2-360btn-playing:hover {
+
+
+	 display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	 cursor:pointer;
+	 font-size: $playericonsize;
+}
+
+
+
+
+
+
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
+.ui360-vis .sm2-360btn-default {
+
+
+	 &::after {
+	 	content: "\f01d";
+	 }
+
+
+	
+}
+
+.ui360-vis:hover .sm2-360btn,
+.ui360-vis .sm2-360btn-default:hover,
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn:hover {
+	
+	 &::after {
+	 	content: "\f01d"; 
+	 }
+}
+
+
+.ui360-vis .sm2-360ui.sm2_playing .sm2-360btn:hover,
+.ui360-vis .sm2-360btn-playing:hover {
+
+	 &::after {
+	 	content: "\f28c";
+	 }
+}
+
+.ui360-vis {
+	 /* non-JS / before-loaded state */
+	 background-position: 21% 50%;
+}
+
+.ui360-vis .sm2-360btn-default {
+ 	/* real button, post-loaded state */
+ 	&::after {
+	 	content: "\f01d"; 
+	 }
+}
+
+.ui360-vis .sm2-360ui.sm2_dragging .sm2-360btn {
+ 	visibility: hidden;
+}
+
+
+
+.ui360 .sm2-360ui.sm2_playing .sm2-360btn,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn:hover,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn-playing:hover {
+  /* don't let pause button show on hover when dragging (or paused and dragging) */
+  background: transparent;
+  cursor: auto;
+   &::after {content: " ";}
+}

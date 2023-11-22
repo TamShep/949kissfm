@@ -1,0 +1,33 @@
+/* 06. Footer
+   ========================================================================== */
+
+.qt-footer-bottom {
+	padding: 2.5rem 0;
+
+	.qt-menu-footer {
+		margin: 0.5rem 0 0 0;
+		padding: 0;
+		line-height: 1em;
+		li {
+			display: inline;
+			line-height: 1em;
+			height: 2 * $qt-font-scale;
+			padding: 0 1rem 0 0;
+			a {
+				
+				line-height: $qt-font-scale;
+				i {
+					font-size: $qt-font-scale;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.qt-footer-widgets {
+	padding: 6rem 0 4rem 0;
+	.qt-footer-logo {
+		text-align: center;
+	}
+}

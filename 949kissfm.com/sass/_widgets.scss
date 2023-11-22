@@ -1,0 +1,88 @@
+.qt-widget {	
+	margin-bottom: 2.8rem;
+}
+
+.qt-widget-onair {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -20px;
+	}
+	.qt-caption-med {
+		margin-bottom: 10px;
+	}
+	p.qt-small {
+		padding: 20px;
+	}
+	padding-bottom: 20px;
+}
+
+
+.qt-widget-upcoming {
+	li {
+		position: relative;
+		margin-bottom: 8px;
+		h5{
+			/* float: left; */
+			padding: 13px 100px 0 13px;
+
+		}
+		p {
+			float: left;
+			padding: 0 100px 2px 13px;
+			font-size: 13px;
+			opacity: .65;
+		}
+		img {
+			position: absolute;
+			right: 0;
+			left: auto;
+			top: 0;
+			width: 100px;
+			height: auto;
+		}
+		&::after {
+			content: " ";
+			display: block;
+			height: 0;
+			width: 100%;
+			clear: both;
+			position: relative;
+		}
+	}
+}
+
+.qt-widget-sponsor {
+	text-align: center;
+	a {
+		padding: 20px;
+		width: 100%;
+		height: auto;
+		display: block;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.qt-widget-contacts {
+	p {
+		padding: 0.5rem 0 0 0;
+		&:first-of-type {
+			padding-top: 0;
+		}
+	}
+	i {
+		font-size: 1.414rem;
+		position: relative;
+		top: 0.28rem;
+		margin-right: 0.7rem;
+	}
+} 
+
+.qt-widget .qt-post-archive-item .qt-item-layers {
+	.qt-overlay .qt-item-title {
+	    padding: 1em 2em 2.3em 2em;
+	}
+}

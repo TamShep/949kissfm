@@ -1,0 +1,21 @@
+.qt-sharepage {
+	display: table;
+	width: 100%;
+	overflow: hidden;
+	li { 
+		font-size: ($qt-font-scale * $qt-font-scale)+rem;
+		display: table-cell;
+		text-align: center;
+		line-height: 2em;
+		a, .qt-shareicon {
+			display: block;
+			width: 100%;
+			height: auto;
+			line-height: 2em;
+			padding:  8px 10px 3px 10px ;
+			opacity: 1;
+		}
+	}
+
+}
+
